@@ -18,7 +18,7 @@ document.getElementById('chat-form').addEventListener('submit', async function(e
         const response = await fetch(`https://open-ai21.p.rapidapi.com/?query=${encodeURIComponent(userInput)}`, options);
         const data = await response.json();
         
-        responseContainer.innerHTML = data.response || 'No se pudo obtener respuesta.';
+        responseContainer.innerHTML = data.response || 'No se pudo obtener respuesta...';
     } catch (error) {
         responseContainer.innerHTML = 'Error al comunicarse con la API.';
         console.error(error);
